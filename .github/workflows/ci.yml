@@ -30,4 +30,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: bernardjeremy/poke-dyb-discord-bot:latest
+          tags: bernardjeremy/dice-dyb-discord-bot:latest
