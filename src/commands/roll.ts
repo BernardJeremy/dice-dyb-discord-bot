@@ -9,7 +9,7 @@ export default {
   description: 'Roll the dice',
 
   async execute(message: Message) {
-    const contentArgs = message.content.substring(1).split('d').filter((arg) => arg);
+    const contentArgs = message.content.substring(1).split('d').filter((arg: string) => arg);
 
     let diceCount = 1;
     let diceValue = 0;
@@ -24,7 +24,7 @@ export default {
       return;
     }
 
-    if (Number.isNaN(diceCount) || Number.isNaN(diceValue)) {
+    if (Number.isNaN(diceCount) || Number.isNaN(diceValue) || diceCount < 1 || diceValue < 1) {
       message.channel.send(inlineCode(`Format error : ${message.content}`));
       return;
     }
