@@ -24,7 +24,7 @@ const main = async () => {
 
   client.login(TOKEN);
 
-  client.once('ready', () => {
+  client.once('clientReady', () => {
     console.info(`Logged in as ${client?.user?.tag}`);
   });
 
